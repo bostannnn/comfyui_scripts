@@ -28,6 +28,7 @@ LLM_GGUF_MODELS=(
 
 LORA_MODELS=(
     "https://civitai.com/api/download/models/806265?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/806265?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(

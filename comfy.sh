@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# This file will be sourced in init.sh
+
+# https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
+
+# Packages are installed after nodes so we can fix them...
+
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/ai-dock/comfyui/main/config/workflows/flux-comfyui-example.json"
+
+APT_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
+PIP_PACKAGES=(
+    #"package-1"
+    #"package-2"
+)
+
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
@@ -15,9 +33,13 @@ CHECKPOINT_MODELS=(
 
 )
 
+CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+)
+
 UNET_MODELS=(
     "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
-
 )
 
 LLM_GGUF_MODELS=(
@@ -108,6 +130,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/clip" \
+        "${CLIP_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"

@@ -10,6 +10,9 @@ CHECKPOINT_MODELS=(
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
+    "https://civitai.com/api/download/models/869391?type=Model&format=SafeTensor&size=full&fp=fp16"
+    "https://civitai.com/api/download/models/867564?type=Model&format=SafeTensor&size=full&fp=fp8"
+
 )
 
 UNET_MODELS=(
@@ -29,6 +32,28 @@ LLM_GGUF_MODELS=(
 LORA_MODELS=(
     "https://civitai.com/api/download/models/806265?type=Model&format=SafeTensor"
     "https://civitai.com/api/download/models/806265?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/780667?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/857668?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/868389?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/792756?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/801399?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/798521?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/800571?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/808564?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/877992?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/792878?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/795612?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/785748?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/849156?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/785935?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/872933?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/876816?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/884629?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/885132?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/876714?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/875896?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/829518?type=Model&format=SafeTensor"
+    "https://civitai.com/api/download/models/818022?type=Model&format=SafeTensor"
 )
 
 VAE_MODELS=(

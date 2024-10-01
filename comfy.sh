@@ -140,7 +140,7 @@ function provisioning_start() {
         "${WORKSPACE}/ComfyUI/models/llm_gguf" \
         "${LLM_GGUF_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/lora" \
+        "${WORKSPACE}/ComfyUI/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/controlnet" \

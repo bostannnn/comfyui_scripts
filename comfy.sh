@@ -114,6 +114,11 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
+CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -128,7 +133,7 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/ckpt" \
+        "${WORKSPACE}/ComfyUI/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/clip" \
@@ -137,7 +142,7 @@ function provisioning_start() {
         "${WORKSPACE}/ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/llm_gguf" \
+        "${WORKSPACE}/ComfyUI/models/llm/Q8" \
         "${LLM_GGUF_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/loras" \
@@ -151,6 +156,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/ComfyUI/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/ComfyUI/models/ultralytics/bbox" \
+        "${ULTRALYTICS_MODELS[@]}"
     provisioning_print_end
 }
 

@@ -133,31 +133,31 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "~/ComfyUI/models/checkpoints" \
+        "ComfyUI/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/clip" \
+        "ComfyUI/models/clip" \
         "${CLIP_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/unet" \
+        "ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/llm/Q8" \
+        "ComfyUI/models/llm/Q8" \
         "${LLM_GGUF_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/loras" \
+        "ComfyUI/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/controlnet" \
+        "ComfyUI/models/controlnet" \
         "${CONTROLNET_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models//vae" \
+        "ComfyUI/models//vae" \
         "${VAE_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/esrgan" \
+        "ComfyUI/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "~/ComfyUI/models/ltralytics/bbox" \
+        "ComfyUI/models/ltralytics/bbox" \
         "${ULTRALYTICS_MODELS[@]}"
     provisioning_print_end
 }

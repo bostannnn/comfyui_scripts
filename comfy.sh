@@ -43,11 +43,11 @@ UNET_MODELS=(
 )
 
 LLM_GGUF_MODELS=(
-    "https://huggingface.co/LoneStriker/Blue-Orchid-2x7b-GGUF/resolve/main/Blue-Orchid-2x7b-Q8_0.gguf"
-    "https://huggingface.co/Lewdiculous/Eris_PrimeV4-Vision-32k-7B-GGUF-IQ-Imatrix/resolve/main/Eris_PrimeV4-Vision-32k-7B-Q8_0-imat.gguf"
-    "https://huggingface.co/TheBloke/EstopianMaid-13B-GGUF/resolve/main/estopianmaid-13b.Q8_0.gguf"
+    #"https://huggingface.co/LoneStriker/Blue-Orchid-2x7b-GGUF/resolve/main/Blue-Orchid-2x7b-Q8_0.gguf"
+    #"https://huggingface.co/Lewdiculous/Eris_PrimeV4-Vision-32k-7B-GGUF-IQ-Imatrix/resolve/main/Eris_PrimeV4-Vision-32k-7B-Q8_0-imat.gguf"
+    #"https://huggingface.co/TheBloke/EstopianMaid-13B-GGUF/resolve/main/estopianmaid-13b.Q8_0.gguf"
     "https://huggingface.co/TheBloke/Unholy-v2-13B-GGUF/resolve/main/unholy-v2-13b.Q8_0.gguf"
-    "https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GGUF/resolve/main/Wizard-Vicuna-13B-Uncensored.Q8_0.gguf?download=true"
+    #"https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GGUF/resolve/main/Wizard-Vicuna-13B-Uncensored.Q8_0.gguf?download=true"
 
 )
 
@@ -133,31 +133,31 @@ function provisioning_start() {
     provisioning_get_nodes
     provisioning_get_pip_packages
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/checkpoints" \
+        "~/ComfyUI/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/clip" \
+        "~/ComfyUI/models/clip" \
         "${CLIP_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/unet" \
+        "~/ComfyUI/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/llm/Q8" \
+        "~/ComfyUI/models/llm/Q8" \
         "${LLM_GGUF_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/loras" \
+        "~/ComfyUI/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/controlnet" \
+        "~/ComfyUI/models/controlnet" \
         "${CONTROLNET_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/vae" \
+        "~/ComfyUI/models//vae" \
         "${VAE_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/esrgan" \
+        "~/ComfyUI/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/ComfyUI/models/ultralytics/bbox" \
+        "~/ComfyUI/models/ltralytics/bbox" \
         "${ULTRALYTICS_MODELS[@]}"
     provisioning_print_end
 }
